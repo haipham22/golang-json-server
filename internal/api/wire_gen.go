@@ -8,22 +8,12 @@ package api
 
 import (
 	"go.uber.org/zap"
-	"golang-sample/internal/api/routes/auth"
-	"golang-sample/internal/api/storage"
-	"golang-sample/pkg/postgres"
 )
 
 // Injectors from wire.go:
 
 func InitApp(isDebugMode bool, db string, log *zap.SugaredLogger) (*Handler, func(), error) {
-	gormDB, cleanup, err := postgres.NewGormDB(isDebugMode, db)
-	if err != nil {
-		return nil, nil, err
-	}
-	storageStorage := storage.NewStorage(log, gormDB)
-	controller := auth.NewAuthController(log, storageStorage)
-	handler := NewApiBiz(log, controller)
+	handler := NewApiBiz(log)
 	return handler, func() {
-		cleanup()
 	}, nil
 }

@@ -6,10 +6,6 @@ package api
 import (
 	"github.com/google/wire"
 	"go.uber.org/zap"
-
-	"golang-sample/internal/api/routes/auth"
-	"golang-sample/internal/api/storage"
-	"golang-sample/pkg/postgres"
 )
 
 func InitApp(
@@ -19,9 +15,8 @@ func InitApp(
 ) (*Handler, func(), error) {
 	panic(wire.Build(
 		NewApiBiz,
-		postgres.NewGormDB,
-		wire.NewSet(storage.NewStorage),
-		wire.NewSet(auth.NewAuthController),
+		//postgres.NewGormDB,
+		//wire.NewSet(storage.NewStorage),
 	))
 
 	return &Handler{}, nil, nil

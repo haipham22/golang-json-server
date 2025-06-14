@@ -2,9 +2,11 @@ package storage
 
 import (
 	"context"
+
 	"go.uber.org/zap"
-	"golang-sample/pkg/models"
 	"gorm.io/gorm"
+
+	"jsonserver/pkg/models"
 )
 
 type Storage interface {

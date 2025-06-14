@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-playground/validator/v10"
 
-	"golang-sample/internal/api/errors"
-	"golang-sample/internal/api/schemas"
+	"jsonserver/internal/api/errors"
+	"jsonserver/internal/api/schemas"
 )
 
 type CustomValidator struct {

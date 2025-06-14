@@ -12,8 +12,8 @@ import (
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 
-	"golang-sample/internal/api"
-	"golang-sample/pkg/config"
+	"jsonserver/internal/api"
+	"jsonserver/pkg/config"
 )
 
 // apiServerCmd represents the binance command
