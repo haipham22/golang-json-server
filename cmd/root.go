@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 
-	"golang-sample/pkg/config"
+	"jsonserver/pkg/config"
 )
 
 var rootCmd = &cobra.Command{

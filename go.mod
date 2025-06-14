@@ -1,4 +1,4 @@
-module golang-sample
+module jsonserver
 
 go 1.23.0
 

@@ -8,7 +8,7 @@ import (
 	"github.com/getsentry/sentry-go"
 	_ "go.uber.org/automaxprocs"
 
-	"golang-sample/cmd"
+	"jsonserver/cmd"
 )
 
 func main() {

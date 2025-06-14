@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 
-	"golang-sample/pkg/models"
+	"jsonserver/pkg/models"
 )
 
 func (s *storageHandler) IsExistBy(field string, condition string) (bool, error) {

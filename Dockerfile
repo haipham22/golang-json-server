@@ -1,7 +1,7 @@
 # Build arguments for easier maintenance
 ARG GO_VERSION=1.24
 ARG DEBIAN_VERSION=bullseye
-ARG APP_NAME=golang-sample
+ARG APP_NAME=jsonserver
 ARG WORK_DIR=/app
 
 # Stage 1: Build the application
@@ -18,10 +18,6 @@ RUN go mod download
 
 # Copy source code that's needed for swagger generation
 COPY . .
-
-RUN swag init \
-    --output ./internal/api/swagger \
-    --generalInfo ./internal/api/routes.go || exit 0
 
 RUN go build -v -o "${APP_NAME}"
 

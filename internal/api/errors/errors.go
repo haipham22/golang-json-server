@@ -9,7 +9,7 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"golang-sample/internal/api/schemas"
+	"jsonserver/internal/api/schemas"
 )
 
 type APIError struct {
