@@ -62,7 +62,17 @@ Format swag comments on Go code
 go fmt
 ```
 
-### TODO
-- [ ] Add more tests
-- [ ] Add ci lint && reviewdog
-- [ ] Add more examples
+Import order fix
+```shell
+go-oif ./...
+```
+
+Generate wire injector
+```shell
+wire ./...
+```
+
+### Tools
+- [google/wire](https://github.com/google/wire) - Dependency Injection
+- [go-oif](https://github.com/heyvito/go-oif) - Import Order Fixer
+- [golangci-lint](https://github.com/golangci/golangci-lint) - Linter aggregator

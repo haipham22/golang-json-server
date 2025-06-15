@@ -4,7 +4,7 @@
 //go:build !wireinject
 // +build !wireinject
 
-package api
+package serve
 
 import (
 	"go.uber.org/zap"
@@ -12,8 +12,7 @@ import (
 
 // Injectors from wire.go:
 
-func InitApp(isDebugMode bool, db string, log *zap.SugaredLogger) (*Handler, func(), error) {
-	handler := NewApiBiz(log)
-	return handler, func() {
-	}, nil
+func InitServeApp(log *zap.SugaredLogger) (*JsonServer, error) {
+	jsonServer := NewJsonServer(log)
+	return jsonServer, nil
 }
